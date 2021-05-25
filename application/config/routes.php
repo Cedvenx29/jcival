@@ -53,3 +53,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['members'] = "members/index";
+$route['membersCreate']['post'] = "members/store";
+$route['membersEdit/(:any)'] = "members/edit/$1";
+$route['membersUpdate/(:any)']['put'] = "members/update/$1";
+$route['membersDelete/(:any)']['delete'] = "products/delete/$1";
